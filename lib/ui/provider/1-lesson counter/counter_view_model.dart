@@ -6,12 +6,10 @@ class CounterViewModel extends ChangeNotifier {
   increment(){
     count++;
     notifyListeners();
-    print("Counter oshdi : $count");
   }
 
   decrement(){
     count--;
     notifyListeners();
-    print("Counter oshdi : $count");
   }
 }

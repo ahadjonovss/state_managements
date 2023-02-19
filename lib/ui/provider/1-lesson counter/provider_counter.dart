@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managements/provider/1-lesson%20counter/counter_view_model.dart';
+import 'package:state_managements/ui/provider/1-lesson%20counter/counter_view_model.dart';
 
 class ProviderCounter extends StatelessWidget {
   const ProviderCounter({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    print("Provider state manageentda ushbu build funksiyasi qayta chaqirildi");
     return Scaffold(
       appBar: AppBar(title: const  Text("Provider Counter"),),
       body: Center(

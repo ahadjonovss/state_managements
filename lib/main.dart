@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managements/default_state_management/default_counter.dart';
-import 'package:state_managements/provider/1-lesson%20counter/counter_view_model.dart';
-import 'package:state_managements/provider/1-lesson%20counter/provider_counter.dart';
+import 'package:state_managements/ui/default_state_management/default_counter.dart';
+import 'package:state_managements/ui/provider/2-lesson%20dio/provider_with_dio.dart';
+
+import 'ui/provider/1-lesson counter/counter_view_model.dart';
+import 'ui/provider/1-lesson counter/provider_counter.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -15,15 +17,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProviderCounter(),
+      home: ProviderWithDio(
+      ),
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_managements/ui/provider/1-lesson%20counter/provider_counter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -14,9 +15,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    print("Default state manageentda ushbu build funksiyasi qayta chaqirildi");
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => ProviderCounter(),));
+
+          }, icon: Icon(Icons.navigate_next_sharp))
+        ],
       ),
       body: Center(
         child: Column(
@@ -35,8 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _counter++;
-          print("Counterning qiymati: $_counter");
-          // setState(() {});
+          setState(() {});
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
