@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:state_managements/default_state_management/default_counter.dart';
-import 'package:state_managements/provider/counter_view_model.dart';
-import 'package:state_managements/provider/provider_counter.dart';
+import 'package:state_managements/provider/1-lesson%20counter/counter_view_model.dart';
+import 'package:state_managements/provider/1-lesson%20counter/provider_counter.dart';
 
 void main() {
   runApp(MultiProvider(
