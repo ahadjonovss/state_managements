@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:state_managements/provider/1-lesson%20counter/provider_counter.dart';
+import 'package:state_managements/1-lesson/provider/1-lesson%20counter/provider_counter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
