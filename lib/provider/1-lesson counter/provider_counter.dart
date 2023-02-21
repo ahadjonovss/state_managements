@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managements/ui/provider/1-lesson%20counter/counter_view_model.dart';
+import 'package:state_managements/provider/1-lesson%20counter/counter_view_model.dart';
 
 class ProviderCounter extends StatelessWidget {
   const ProviderCounter({Key? key}) : super(key: key);

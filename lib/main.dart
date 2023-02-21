@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managements/ui/default_state_management/default_counter.dart';
-import 'package:state_managements/ui/provider/2-lesson%20dio/provider_with_dio.dart';
+import 'package:state_managements/default_state_management/default_counter.dart';
+import 'package:state_managements/provider/1-lesson%20counter/counter_view_model.dart';
 
-import 'ui/provider/1-lesson counter/counter_view_model.dart';
-import 'ui/provider/1-lesson counter/provider_counter.dart';
 
 void main() {
   runApp(MultiProvider(
@@ -25,8 +23,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProviderWithDio(
-      ),
+      home: MyHomePage(title: 's',)
     );
   }
 }
