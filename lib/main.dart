@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:state_managements/1-lesson/default_state_management/default_counter.dart';
-import 'package:state_managements/1-lesson/provider/1-lesson%20counter/counter_view_model.dart';
-import 'package:state_managements/2-lesson/ui/products/products_page.dart';
-import 'package:state_managements/2-lesson/view_model/products_view_model.dart';
+import 'package:state_managements/ui/products/products_page.dart';
+import 'package:state_managements/view_model/product_view_model.dart';
+import 'package:state_managements/view_model/products_view_model.dart';
 
 
 void main() {
   runApp(MultiProvider(
     providers: [
-      ChangeNotifierProvider(create: (context) => CounterViewModel(),),
       ChangeNotifierProvider(create: (context) => ProductsViewModel(),),
+      ChangeNotifierProvider(create: (context) => ProductViewModel(),),
     ],
       child: const MyApp()));
 }
