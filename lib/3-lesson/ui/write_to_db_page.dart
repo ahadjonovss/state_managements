@@ -17,9 +17,10 @@ class WriteToDbPage extends StatelessWidget {
         title: Text("Write to Db"),
         actions: [
           IconButton(onPressed: () {
+            context.read<MindsViewModel>().readMinds();
             Navigator.push(context, MaterialPageRoute(builder: (context) => AllMindsPage(),));
 
-          }, icon: Icon(Icons.read_more))
+          }, icon: const Icon(Icons.read_more))
         ],
       ),
       body: Padding(
@@ -33,7 +34,7 @@ class WriteToDbPage extends StatelessWidget {
                 border: OutlineInputBorder()
               ),
             ),
-            SizedBox(height: 24,),
+            const SizedBox(height: 24,),
             TextField(
               controller: author,
               decoration: InputDecoration(
@@ -45,7 +46,7 @@ class WriteToDbPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
         onPressed: () async {
           context.read<MindsViewModel>().addMind(MindModel(author: author.text, mind: mind.text));
         },

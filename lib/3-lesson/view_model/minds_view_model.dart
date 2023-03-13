@@ -22,6 +22,17 @@ class MindsViewModel extends ChangeNotifier{
     loadingChanger();
   }
 
+  void updateMind(MindModel mindModel,String mind) async{
+    mindRepository!.updateMind(mindModel, mind);
+    readMinds();
+  }
+
+
+  void deleteMind(String mind) async{
+    mindRepository!.deleteMind(mind);
+    readMinds();
+  }
+
 
   void loadingChanger(){
     isLoading=!isLoading;
