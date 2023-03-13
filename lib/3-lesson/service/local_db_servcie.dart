@@ -1,4 +1,5 @@
 import 'package:sqflite/sqflite.dart';
+import 'package:state_managements/3-lesson/data/model/mind_model.dart';
 
 class LocalDatabase{
   Database? database;
@@ -32,11 +33,16 @@ class LocalDatabase{
 
   void populateDb(Database database, int version) async {
     await database.execute("CREATE TABLE $tableName ("
-        "id INTEGER PRIMARY KEY,"
-        "name TEXT,"
-        "number TEXT,"
-        "createdAt TEXT"
+        "mind TEXT,"
+        "author TEXT"
         ")");
+  }
+
+
+  Future addMind(MindModel mind) async {
+    Database db = await getDb();
+    var id = await db.insert(tableName, mind.toJson());
+    print("Mind $id bilan databsega saqlandi");
   }
 
 }
