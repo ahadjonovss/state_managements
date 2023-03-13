@@ -4,6 +4,7 @@ import 'package:state_managements/1-lesson/default_state_management/default_coun
 import 'package:state_managements/1-lesson/provider/1-lesson%20counter/counter_view_model.dart';
 import 'package:state_managements/2-lesson/ui/products/products_page.dart';
 import 'package:state_managements/2-lesson/view_model/products_view_model.dart';
+import 'package:state_managements/3-lesson/ui/write_to_db_page.dart';
 
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ProductsPage()
+      home: WriteToDbPage()
     );
   }
 }
