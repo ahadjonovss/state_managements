@@ -6,5 +6,12 @@ class MindRepository{
 
   MindRepository({required this.db});
 
-  addMind(MindModel mind) async => await db!.addMind(mind);
+  void addMind(MindModel mind) async => await db!.addMind(mind);
+
+  Future<List<MindModel>> readMind() async{
+    var result = await db!.getMinds();
+    return result.map((e) => MindModel.fromJson(e)).toList();
+
+
+  }
 }

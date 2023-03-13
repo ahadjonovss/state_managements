@@ -45,4 +45,11 @@ class LocalDatabase{
     print("Mind $id bilan databsega saqlandi");
   }
 
+  Future<List> getMinds() async {
+    Database db = await getDb();
+
+    var result = await db.query(tableName, columns: ["author", "mind"]);
+    return result.toList();
+  }
+
 }
