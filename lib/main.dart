@@ -8,6 +8,8 @@ import 'package:state_managements/3-lesson/data/repository/mind_repository.dart'
 import 'package:state_managements/3-lesson/service/local_db_servcie.dart';
 import 'package:state_managements/3-lesson/ui/write_to_db_page.dart';
 import 'package:state_managements/3-lesson/view_model/minds_view_model.dart';
+import 'package:get/get.dart';
+import 'package:state_managements/4-lesson/ui/counter_page.dart';
 
 
 void main() {
@@ -25,13 +27,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WriteToDbPage()
+      home: CounterPage()
     );
   }
 }
