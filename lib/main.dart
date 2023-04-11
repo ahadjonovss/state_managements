@@ -10,6 +10,7 @@ import 'package:state_managements/3-lesson/ui/write_to_db_page.dart';
 import 'package:state_managements/3-lesson/view_model/minds_view_model.dart';
 import 'package:get/get.dart';
 import 'package:state_managements/4-lesson/ui/counter_page.dart';
+import 'package:state_managements/5-lesson/ui/jokes_page.dart';
 
 
 void main() {
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CounterPage()
+      home: JokesPage()
     );
   }
 }
