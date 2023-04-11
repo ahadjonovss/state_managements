@@ -11,6 +11,8 @@ import 'package:state_managements/3-lesson/view_model/minds_view_model.dart';
 import 'package:get/get.dart';
 import 'package:state_managements/4-lesson/ui/counter_page.dart';
 import 'package:state_managements/5-lesson/ui/jokes_page.dart';
+import 'package:state_managements/6-lesson/ui/transtlation_page.dart';
+import 'package:state_managements/6-lesson/utils/translation.dart';
 
 
 void main() {
@@ -29,12 +31,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      translations: Messages(),
+      locale: Locale("uz","UZ"),
+      fallbackLocale: Locale("en","EN"),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: JokesPage()
+      home: TranslationPAge()
     );
   }
 }
