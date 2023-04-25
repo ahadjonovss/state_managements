@@ -7,10 +7,11 @@ class ThemeController extends GetxController{
   ThemeController(context){
     checkTheme(context);
   }
-  var isLight = false.obs;
+  var isDark = Get.isDarkMode.obs;
 
   checkTheme(BuildContext context){
-    isLight.value=Get.isDarkMode;
+    print("Current theme mode is Dark: ${isDark.value}");
+    isDark.value=Get.isDarkMode;
   }
 
   changeTheme(context){

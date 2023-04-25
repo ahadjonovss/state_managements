@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:state_managements/7-lesson%20(live)/controller/bottom_nav_controller.dart';
+import 'package:state_managements/7-lesson%20(live)/controller/theme_controller.dart';
 import 'package:state_managements/7-lesson%20(live)/ui/pages/home/my_home_page.dart';
 import 'package:state_managements/7-lesson%20(live)/ui/pages/more/more_page.dart';
 import 'package:state_managements/7-lesson%20(live)/ui/widgets/bottom_nav_bar.dart';
@@ -17,6 +18,8 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     BottomNavController controller = Get.put(BottomNavController());
+    ThemeController themeController = Get.put(ThemeController(context));
+
     List<Widget> pages =[
       MyHomePage(),
       Scaffold(),

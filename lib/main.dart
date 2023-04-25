@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: AppThemes.lightTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: ThemeMode.system,
       home:MainPage()
     );
   }
