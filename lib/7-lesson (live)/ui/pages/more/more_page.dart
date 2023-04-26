@@ -34,8 +34,10 @@ class _MorePageState extends State<MorePage> {
                 Text("Dark mode",style: TextStyle(color: Get.theme.accentColor),),
                 CupertinoSwitch(value: Get.isDarkMode, onChanged: (value) {
                   Get.changeTheme(Get.isDarkMode?ThemeData.light():ThemeData.dark());
+                  Get.changeThemeMode(Get.isDarkMode?ThemeMode.light:ThemeMode.dark);
                   setState(() {
                     print('Qayta chizildi');
+                    print("Current theme mode is dark 2 ${Get.isDarkMode}");
                     print(Get.isDarkMode);
                   });
                 },)

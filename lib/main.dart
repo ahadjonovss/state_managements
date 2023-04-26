@@ -33,14 +33,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      darkTheme: AppThemes.darkTheme,
+      darkTheme: ThemeData.dark(),
       translations: Messages(),
       locale: Locale("uz","UZ"),
       fallbackLocale: Locale("en","EN"),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: AppThemes.lightTheme,
-      themeMode: ThemeMode.system,
+      theme: ThemeData.light(),
       home:MainPage()
     );
   }
