@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:state_managements/1-lesson/default_state_management/default_counter.dart';
 import 'package:state_managements/1-lesson/provider/1-lesson%20counter/counter_view_model.dart';
@@ -15,10 +17,24 @@ import 'package:state_managements/6-lesson/ui/transtlation_page.dart';
 import 'package:state_managements/6-lesson/utils/translation.dart';
 import 'package:state_managements/7-lesson%20(live)/ui/main_page.dart';
 import 'package:state_managements/7-lesson%20(live)/utils/app_theme.dart';
+import 'package:state_managements/8-lesson/data/model/car_adapter.dart';
+import 'package:state_managements/8-lesson/ui/hive_first_example.dart';
+
+import '8-lesson/data/model/car_model.dart';
 
 
-void main() {
-  runApp(MultiProvider(
+void main() async{
+   WidgetsFlutterBinding.ensureInitialized();
+   final appDocumentDirectory = await getApplicationDocumentsDirectory();
+   Hive.init(appDocumentDirectory.path);
+   await Hive.openBox('myBox');
+   Hive.registerAdapter(CarAdapter());
+   await Hive.openBox('gm');
+
+
+
+
+   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => CounterViewModel(),),
       ChangeNotifierProvider(create: (context) => ProductsViewModel(),),
@@ -40,7 +56,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home:MainPage()
+      home: HiveFirstExample()
     );
   }
 }
