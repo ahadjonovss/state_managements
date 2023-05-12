@@ -17,19 +17,18 @@ import 'package:state_managements/6-lesson/ui/transtlation_page.dart';
 import 'package:state_managements/6-lesson/utils/translation.dart';
 import 'package:state_managements/7-lesson%20(live)/ui/main_page.dart';
 import 'package:state_managements/7-lesson%20(live)/utils/app_theme.dart';
-import 'package:state_managements/8-lesson/data/model/car_adapter.dart';
+import 'package:state_managements/8-lesson/data/adapters/car_adapter.dart';
 import 'package:state_managements/8-lesson/ui/hive_first_example.dart';
 
-import '8-lesson/data/model/car_model.dart';
 
 
 void main() async{
-   WidgetsFlutterBinding.ensureInitialized();
-   final appDocumentDirectory = await getApplicationDocumentsDirectory();
-   Hive.init(appDocumentDirectory.path);
-   await Hive.openBox('myBox');
-   Hive.registerAdapter(CarAdapter());
-   await Hive.openBox('gm');
+    WidgetsFlutterBinding.ensureInitialized();
+    final appDocumentDirectory = await getApplicationDocumentsDirectory();
+    Hive.init(appDocumentDirectory.path);
+    await Hive.openBox('vegetables');
+    Hive.registerAdapter(CarAdapter());
+   await Hive.openBox('gmShowRoom');
 
 
 
