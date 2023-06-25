@@ -19,6 +19,8 @@ import 'package:state_managements/7-lesson%20(live)/ui/main_page.dart';
 import 'package:state_managements/7-lesson%20(live)/utils/app_theme.dart';
 import 'package:state_managements/8-lesson/data/adapters/car_adapter.dart';
 import 'package:state_managements/8-lesson/ui/hive_first_example.dart';
+import 'package:state_managements/9-lesson/ui/authorization/register_page.dart';
+import 'package:state_managements/9-lesson/ui/splash/splash_page.dart';
 
 
 
@@ -27,6 +29,7 @@ void main() async{
     final appDocumentDirectory = await getApplicationDocumentsDirectory();
     Hive.init(appDocumentDirectory.path);
     await Hive.openBox('vegetables');
+    await Hive.openBox('auth');
     Hive.registerAdapter(CarAdapter());
    await Hive.openBox('gmShowRoom');
 
@@ -55,7 +58,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home: HiveFirstExample()
+      home: SplashPage()
     );
   }
 }
