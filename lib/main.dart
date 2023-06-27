@@ -4,6 +4,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:state_managements/1-lesson/default_state_management/default_counter.dart';
 import 'package:state_managements/1-lesson/provider/1-lesson%20counter/counter_view_model.dart';
+import 'package:state_managements/10-lesson/ui/math_page.dart';
 import 'package:state_managements/2-lesson/ui/products/products_page.dart';
 import 'package:state_managements/2-lesson/view_model/products_view_model.dart';
 import 'package:state_managements/3-lesson/data/repository/mind_repository.dart';
@@ -20,6 +21,7 @@ import 'package:state_managements/7-lesson%20(live)/utils/app_theme.dart';
 import 'package:state_managements/8-lesson/data/adapters/car_adapter.dart';
 import 'package:state_managements/8-lesson/ui/hive_first_example.dart';
 import 'package:state_managements/9-lesson/ui/authorization/register_page.dart';
+import 'package:state_managements/9-lesson/ui/home/home_page.dart';
 import 'package:state_managements/9-lesson/ui/splash/splash_page.dart';
 
 
@@ -58,7 +60,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData.light(),
-      home: SplashPage()
+      home: MathPage()
     );
   }
 }
